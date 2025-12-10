@@ -20,7 +20,7 @@ export default function NiivueLoadOverlay({ imageUrl }) {
         nv.attachToCanvas(canvas.current);
         await nv.loadVolumes([
             {
-                url: './MNI152_T1_0.5mm.nii',
+                url: './MNI152_T1_0.5mm.nii.gz',
                 colormap: 'gray'
             },
             {

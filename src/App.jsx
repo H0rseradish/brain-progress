@@ -23,17 +23,20 @@ export default function App() {
 
   return (
     <div style={{ paddingRight: "5vw", paddingLeft: "5vw" }}>
+
+        <button onPointerDown={ currentTask < 6 && handlePointerDownPrev } > ⏴ </button>
+        <button onPointerDown={ currentTask > 0 && handlePointerDownNext } > ⏵ </button>
+        
         <TaskDisplay currentTask={ currentTask }/>
-        <button onPointerDown={ currentTask < 6 && handlePointerDownPrev } >Previous</button>
-        <button onPointerDown={ currentTask > 0 && handlePointerDownNext } >Next</button>
+        
         <h1>Trying out Niivue...</h1>
         <div id="first">
             <h2>Highest resolution file from Tirso</h2>
-            <NiivueLoad imageUrl="./MNI152_T1_0.5mm.nii" />
+            <NiivueLoad imageUrl="./MNI152_T1_0.5mm.nii.gz" />
         </div>  
         <div id="second">
             <h2>Lower resolution file from Tirso</h2>
-            <NiivueLoad imageUrl="./MNI152_T1_2mm_brain.nii" />
+            <NiivueLoad imageUrl="./MNI152_T1_2mm_brain.nii.gz" />
         </div>    
         <div id="third">
             <h2>Overlaying the language association test data on the brain anatomy</h2>

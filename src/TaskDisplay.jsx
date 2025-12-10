@@ -65,21 +65,18 @@ export default function TaskDisplay({ currentTask }) {
             { currentTaskInfo.name ? currentTaskInfo.name : null }
             </h2>
 
-            <p 
-                style={{
-                    // paddingRight: "5vw",
-                    // paddingLeft: "5vw",
-                    fontSize: "1.7em",
-                    lineHeight: "1.2em",
-                    margin: 0
-                }}
-            >
-             a sentence   {/* { currentHighlight.length === 1 ? currentHighlight[0].highlightText : '' } */}
-            </p>
 
-            <ul>
+            <ul style={{ fontSize: "2em", lineHeight: "2em" }}>
             { currentTaskInfo.descriptions.length === 1 ? <li>{ currentTaskInfo.descriptions }</li> : currentTaskInfo.descriptions.map((description) => <li>{ description }</li>)}
             </ul>
+            { currentTaskInfo.imageURL && (
+                            <img 
+                                src={currentTaskInfo.imageURL}
+                                style={{
+                                    maxWidth: "80vw",
+                                }}
+                            />
+                        )}
             
 
         </div>

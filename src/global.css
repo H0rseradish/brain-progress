@@ -7,8 +7,10 @@ body {
 
 button {
     margin-right: 1rem;
+    margin-left: 0;
+    font-size: 5em;
     padding: 20px;
-    background-color: gray;
+    background-color: rgb(78, 76, 76);
     color: white;
     border-width: 2px;
     border-style: none;
