@@ -1,0 +1,16 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    margin: 1rem;
+}
+
+button {
+    margin-right: 1rem;
+    padding: 20px;
+    background-color: gray;
+    color: white;
+    border-width: 2px;
+    border-style: none;
+    border-radius: 10px;
+}

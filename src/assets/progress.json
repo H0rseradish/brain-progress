@@ -1,0 +1,60 @@
+{
+    "title": "Progress",
+    "version": "1.0",
+    "app": {
+        "author": "Sarah Hartill"
+    },
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Progress",
+            "descriptions": "Open source, and web-based, so thought I would make a small React app and put it up on github. And interesting to see how this brain visualiser performs on the internet instead of just locally on my machine. And it's always good to practise!"
+        },
+        {
+            "id": 2,
+            "name": "Previous week",
+            "descriptions": [
+                "Exploring Spatialstrates.",
+                "Exploring Pete's brain in AR",
+                "Exploring literature",
+                "Further exploration of Spatialstrates and attempt to improve labelling"
+            ],
+            "images": "miro"
+        },
+        {
+            "id": 3,
+            "name": "Thursday",
+            "descriptions": [ 
+                "Online meeting with Tirso, Alex, Pete", 
+                "Alex and Tirso described a range of tools they have used that are worth looking at", 
+                "Alex described his idea he wanted from an educational tool and that other universities had expressed an interest in what he was doing so far",
+                "Tirso talked about various tools and their uuses and features, and sent over some additional .nii files obtained from the MRI scanner at various resolutions."
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Friday",
+            "descriptions": [
+                "Experimenting with NiiVue, web-based MRI viewer, to render Tirso's files including a brain activity layer"
+            ],
+            "images": "image"
+        },
+        {
+            "id": 5,
+            "name": "Monday",
+            "descriptions": [
+                "Investigate other software mentioned by Tirso and Alex",
+                "Investigate list of projects using NiiVue"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Tuesday",
+            "descriptions": [
+                "start on Niivue codebase in attempt to understand",
+                "webGL2",
+                "Typescript"
+            ]
+        }
+    ]
+}
