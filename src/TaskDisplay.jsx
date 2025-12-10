@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import progress from './assets/progress.json';
+import NiivueLoad from './NiivueLoad.jsx';
+import NiivueLoadOverlay from './NiivueLoadOverlay.jsx';
+
 
 console.log(progress)
 
@@ -40,14 +43,14 @@ export default function TaskDisplay({ currentTask }) {
                 // bottom: 30,
                 width: "100%",
                 height: "fit-content",
-                marginTop: "5em",
+                marginTop: "2em",
                 paddingBottom: "4rem",
                 pointerEvents: "none",
                 textAlign: "start",
                 zIndex: 2,
             }}>
 
-            <h2 
+            <h1 
                 style={{
                     // position:"absolute",
                     // bottom: 110,
@@ -63,10 +66,10 @@ export default function TaskDisplay({ currentTask }) {
                 }}
             >
             { currentTaskInfo.name ? currentTaskInfo.name : null }
-            </h2>
+            </h1>
 
 
-            <ul style={{ fontSize: "2em", lineHeight: "2em" }}>
+            <ul style={{ fontSize: "2em", lineHeight: "2em", paddingBottom: "2rem"}}>
             { currentTaskInfo.descriptions.length === 1 ? <li>{ currentTaskInfo.descriptions }</li> : currentTaskInfo.descriptions.map((description) => <li>{ description }</li>)}
             </ul>
             { currentTaskInfo.imageURL && (
@@ -77,6 +80,23 @@ export default function TaskDisplay({ currentTask }) {
                                 }}
                             />
                         )}
+            { currentTaskInfo.showNiivue && (
+                <div>
+                    <h2>Trying out Niivue...</h2>
+                    <div id="first">
+                        <h2>Highest resolution file from Tirso</h2>
+                        <NiivueLoad imageUrl="./MNI152_T1_0.5mm.nii.gz" />
+                    </div>  
+                    <div id="second">
+                        <h2>Lower resolution file from Tirso</h2>
+                        <NiivueLoad imageUrl="./MNI152_T1_2mm_brain.nii.gz" />
+                    </div>    
+                    <div id="third">
+                        <h2>Overlaying the language association test data on the brain anatomy</h2>
+                        <NiivueLoadOverlay />
+                    </div> 
+                </div>
+            )}
             
 
         </div>

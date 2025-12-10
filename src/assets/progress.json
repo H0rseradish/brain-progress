@@ -38,7 +38,7 @@
                 "Rendered Tirso's files",
                 "Brain activity layer"
             ],
-            "show-niivue": true
+            "showNiivue": true
         },
         {
             "id": 5,
@@ -47,7 +47,7 @@
                 "Investigate other software mentioned by Tirso and Alex",
                 "Investigate list of projects using NiiVue"
             ],
-            "show-niivue": true
+            "showNiivue": true
         },
         {
             "id": 6,
@@ -57,7 +57,7 @@
                 "webGL2",
                 "Typescript"
             ],
-            "show-niivue": true
+            "showNiivue": true
         }
     ]
 }
