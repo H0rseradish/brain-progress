@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import NiivueLoad from './NiivueLoad.jsx';
 import NiivueLoadOverlay from './NiivueLoadOverlay.jsx';
+import progress from './assets/progress.json';
 import TaskDisplay from './TaskDisplay.jsx';
+
 
 export default function App() {
   const [ currentTask, setCurrentTask ] = useState(2)
+
+  const currentTaskInfo = progress.tasks[currentTask - 1]
 
   const handlePointerDownNext = () => {
     console.log("clicked")
@@ -28,6 +32,24 @@ export default function App() {
         <button onPointerDown={ currentTask > 0 && handlePointerDownNext } > ⏵ </button>
 
         <TaskDisplay currentTask={ currentTask }/>
+
+        { currentTaskInfo.showNiivue && (
+            <div>
+                <h2>Trying out Niivue...</h2>
+                <div id="first">
+                    <h2>Highest resolution file from Tirso</h2>
+                    <NiivueLoad imageUrl="./MNI152_T1_0.5mm.nii.gz" />
+                </div>  
+                <div id="second">
+                    <h2>Lower resolution file from Tirso</h2>
+                    <NiivueLoad imageUrl="./MNI152_T1_2mm_brain.nii.gz" />
+                </div>    
+                <div id="third">
+                    <h2>Overlaying the language association test data on the brain anatomy</h2>
+                    <NiivueLoadOverlay />
+                </div> 
+            </div>
+        )}
         
         {/* <h1>Trying out Niivue...</h1>
         <div id="first">

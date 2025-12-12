@@ -80,7 +80,7 @@ export default function TaskDisplay({ currentTask }) {
                                 }}
                             />
                         )}
-            { currentTaskInfo.showNiivue && (
+            {/* { currentTaskInfo.showNiivue && (
                 <div>
                     <h2>Trying out Niivue...</h2>
                     <div id="first">
@@ -96,7 +96,7 @@ export default function TaskDisplay({ currentTask }) {
                         <NiivueLoadOverlay />
                     </div> 
                 </div>
-            )}
+            )} */}
             
 
         </div>
